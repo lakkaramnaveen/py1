@@ -1,7 +1,5 @@
-f = [1,2,3,4]
-print(len(f))
-for i in range(len(f)):
-    print(i)
-
-x = list()
-print(dir(x))
+x = "hi how are you"
+stuff = x.split()
+print(stuff)
+print(len(stuff))
+print(stuff[0])
