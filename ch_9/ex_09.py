@@ -4,13 +4,15 @@ hand = open(fname)
 
 di = dict()
 for line in hand:
-    line = line.rstrip()
-    #  strip all spaces intro
-    words = line.split()
+    words = line.rstrip().split()
     for word in words:
-        # if the key is not there then the count is zero
-        # if the word is not in "di" then assign it zero
         di[word] = di.get(word, 0) + 1
 
+largest = -1
+theword = None
 for w, i in di.items():
-    print(w, i)
+    if i > largest:
+        largest = i
+        theword = w
+
+print(largest, theword)
