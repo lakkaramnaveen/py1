@@ -1,10 +1,10 @@
-x = "hi;show; are you"
-stuff = x.split(';')
-print(stuff)
-print(len(stuff))
-print(stuff[0])
-
-
-line = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'
-words = line.split()
-print (words)
+han = open('mbox.txt')
+for line in han:
+    line = line.rstrip()
+    wds = line.split()
+    print(wds)
+    if len(wds)==0:
+        continue
+    if wds[0]!='From':
+        continue
+    print(wds[2])
