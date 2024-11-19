@@ -1,7 +1,6 @@
-han = open('mbox.txt')
-for line in han:
-    line = line.rstrip()
-    wds = line.split()
-    if len(wds)<3 or wds[0]!='From':
-        continue
-    print(wds[2])
+h = dict()
+h[0]= 'nani'
+h[2]= 'asa'
+h[1]= 'nani'
+h[3]= 'nani'
+print(h)
