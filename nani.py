@@ -1,7 +1,19 @@
-x = ('Glenn', 'Sally', 'Joseph')
-print(x[2])
-y = ( 1, 9, 2)
-print(y)
-print(max (y))
-(x,y) = ((1,2,3),('nani','chinni'))
-print(x)
+# hand = open('mbox.txt')
+# for line in hand:
+#     line = line.rstrip ()
+#     if line.find('From: ') >= 0:
+#         print (line)
+
+hand = open('mbox.txt')
+for line in hand:
+    line = line.rstrip ()
+    if line.startswith('From: ') >= 0:
+        print (line)
+
+import re
+
+hand = open('mbox.txt')
+for line in hand:
+    line = line.rstrip ()
+    if re.search('^From: ', line):
+        print (line)
