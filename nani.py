@@ -1,13 +1,5 @@
 import re
 
-hand = open('mbox.txt')
-numList = list()
-
-for line in hand:
-    line = line.rstrip()
-    stuff = re.findall('^X-DSPAM-Confidence: ([0-9.]+)', line)
-    if len(stuff) != 1: continue
-    num = float(stuff[0])
-    numList.append(num)
-    
-print(max(numList))
+x = 'We just received $10.00 for cookies.'
+y = re.findall('\$[0-9.]?+',x)
+print(y)
